@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Edit <%= brewery.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/breweries/<%= brewery._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[name]" value="<%= brewery.name %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[brewery_type]" value="<%= brewery.brewery_type %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[street]" value="<%= brewery.street %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[city]" value="<%= brewery.city %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[state]" value="<%= brewery.state %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[country]" value="<%= brewery.country %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[website_url]" value="<%= brewery.website_url %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[image]" value="<%= brewery.image %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="Brewery[description]" value="<%= brewery.description %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/breweries">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+
